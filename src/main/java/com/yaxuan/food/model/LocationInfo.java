@@ -16,6 +16,8 @@ public class LocationInfo implements Serializable {
     @CsvBindByName(column = "Longitude")
     private String longitude;
 
+    public LocationInfo(){}
+
     public LocationInfo(String lat, String lon) {
         this.latitude = lat;
         this.longitude = lon;

@@ -7,4 +7,6 @@ public interface FoodTrucksService {
     FoodTruckInfo chooseRandomly(ChooseCondition condition);
 
     FoodTruckInfo chooseByName(String foodTruckName);
+
+    FoodTruckInfo getById(int id);
 }

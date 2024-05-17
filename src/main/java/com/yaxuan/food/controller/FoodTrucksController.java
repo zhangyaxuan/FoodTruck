@@ -23,5 +23,9 @@ public class FoodTrucksController {
         FoodTruckInfo foodTruckInfo = foodTrucksService.chooseByName(foodTruckName);
         return Result.ok(foodTruckInfo);
     }
-
+    @GetMapping("/foodTruck/byId")
+    public Result<FoodTruckInfo> chooseFoodTruckById(@RequestParam Integer id){
+        FoodTruckInfo foodTruckInfo = foodTrucksService.getById(id);
+        return Result.ok(foodTruckInfo);
+    }
 }

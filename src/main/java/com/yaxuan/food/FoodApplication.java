@@ -3,6 +3,7 @@ package com.yaxuan.food;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import com.yaxuan.food.model.ApplicationInfo;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +11,7 @@ import java.io.FileReader;
 import java.util.List;
 
 @SpringBootApplication
+@MapperScan("com.yaxuan.food.repository.mapper")
 public class FoodApplication {
 
     public static void main(String[] args) {

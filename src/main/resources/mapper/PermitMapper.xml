@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaxuan.food.repository.mapper.PermitMapper">
+    <resultMap id="PermitResultMap" type="com.yaxuan.food.model.entity.Permit">
+        <id property="id" column="id" />
+        <result property="locationid" column="locationid" />
+        <result property="applicant" column="Applicant" />
+        <result property="permit" column="permit" />
+        <result property="status" column="Status" />
+        <result property="schedule" column="Schedule" />
+        <result property="approved" column="Approved" />
+        <result property="received" column="Received" />
+        <result property="priorPermit" column="PriorPermit" />
+        <result property="expirationDate" column="ExpirationDate" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, locationid, Applicant, permit, Status, Schedule, Approved, Received, PriorPermit, ExpirationDate
+    </sql>
+
+    <select id="getPermitById" resultType="com.yaxuan.food.model.entity.Permit">
+        SELECT <include refid="Base_Column_List" />
+        FROM Mobile_Food_Facility_Permit WHERE id = #{id}
+    </select>
+</mapper>

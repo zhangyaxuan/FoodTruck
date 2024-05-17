@@ -10,7 +10,8 @@ import java.util.List;
 public class FoodTruckInfo implements Serializable {
     @Serial
     private static final long serialVersionUID = -2959959375698529067L;
-    private Long id;
+    private Integer id;
+    private Long locationId;
     private String name;
     private String locationDescription;
     private String shopHours;

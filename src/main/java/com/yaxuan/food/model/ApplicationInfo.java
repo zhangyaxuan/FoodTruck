@@ -57,7 +57,7 @@ public class ApplicationInfo implements Serializable {
 
     public FoodTruckInfo getFoodTruckInfo() {
         FoodTruckInfo info = new FoodTruckInfo();
-        info.setId(this.locationId);
+        info.setLocationId(this.locationId);
         info.setName(this.applicant);
         info.setLatitude(this.locationInfo.getLatitudeValue());
         info.setLongitude(this.locationInfo.getLongitudeValue());
